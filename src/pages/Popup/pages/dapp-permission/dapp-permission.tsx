@@ -88,8 +88,15 @@ const DappPermission = () => {
       />
       <Stack spacing={2} sx={{ position: 'relative', pt: 2, mb: 4 }}>
         <OriginInfo permission={permission} />
-        <Paper sx={{ p: 2 }}>
-          <Typography variant="subtitle2" sx={{ mb: 2 }}>
+        <Paper
+          sx={{
+            p: 2,
+            borderRadius: 2,
+            border: '1px solid #c2c5c7',
+            boxShadow: 'none',
+          }}
+        >
+          <Typography variant="subtitle2" sx={{ mb: 2 }} fontWeight="500">
             Requesting permissions
           </Typography>
           <Stack spacing={1}>
@@ -118,12 +125,22 @@ const DappPermission = () => {
           justifyContent="space-around"
           alignItems="center"
           display="flex"
-          sx={{ p: 2 }}
+          sx={{ p: 1, borderRadius: 2 }}
         >
-          <Button sx={{ width: 150 }} variant="outlined" onClick={deny}>
+          <Button
+            sx={{ width: 150, borderRadius: 2 }}
+            variant="outlined"
+            onClick={deny}
+            color="secondary"
+          >
             Reject
           </Button>
-          <Button sx={{ width: 150 }} variant="contained" onClick={grant}>
+          <Button
+            sx={{ width: 150, borderRadius: 2 }}
+            variant="contained"
+            onClick={grant}
+            color="secondary"
+          >
             Connect
           </Button>
         </Box>

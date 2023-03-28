@@ -164,7 +164,7 @@ export const sendTransaction = createBackgroundAsyncThunk(
     ) as KeyringService;
 
     const state = mainServiceManager.store.getState() as RootState;
-    console.log('tx', state.transactions);
+    console.log('my tx', state.transactions);
 
     // const tx = await Wallet();
 

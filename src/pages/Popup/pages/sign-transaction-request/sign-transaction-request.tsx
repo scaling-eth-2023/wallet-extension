@@ -288,7 +288,7 @@ const SignTransactionRequest = () => {
             context: _context || context,
           })
         );
-      window.close();
+      // window.close();
     },
     [activeAccount, backgroundDispatch, context]
   );

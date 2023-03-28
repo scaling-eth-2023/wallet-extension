@@ -9,7 +9,7 @@ const AccountInfo = ({
   accountInfo: { name: string };
 }) => {
   return (
-    <Paper sx={{ bgcolor: 'primary.light' }}>
+    <Paper sx={{ bgcolor: '#C8366B', borderRadius: 2 }}>
       <Stack
         p={2}
         direction="row"

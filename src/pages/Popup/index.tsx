@@ -1,10 +1,24 @@
 import React from 'react';
 import Popup from './Popup';
 import './index.css';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Store } from 'webext-redux';
 import { Provider } from 'react-redux';
 import { createRoot } from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      // Purple and green play nicely together.
+      main: '#650228',
+    },
+    secondary: {
+      // This is green.A700 as hex.
+      main: '#C8366B',
+    },
+  },
+});
 
 const store = new Store();
 
@@ -20,9 +34,11 @@ store.ready().then(() => {
     const root = createRoot(container);
     root.render(
       <Provider store={store}>
-        <HashRouter>
-          <Popup />
-        </HashRouter>
+        <ThemeProvider theme={theme}>
+          <HashRouter>
+            <Popup />
+          </HashRouter>
+        </ThemeProvider>
       </Provider>
     );
   }

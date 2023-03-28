@@ -7,8 +7,10 @@ const OriginInfo = ({ permission }: { permission?: PermissionRequest }) => {
   if (!permission) return <></>;
 
   return (
-    <Paper elevation={1}>
-      <Box display="flex" padding={2} sx={{ overflow: 'scroll' }}>
+    <Paper
+      sx={{ borderRadius: 2, border: '1px solid #c2c5c7', boxShadow: 'none' }}
+    >
+      <Box display="flex" padding={2} sx={{ overflow: 'auto' }}>
         <Box
           width={40}
           display="flex"
